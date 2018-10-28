@@ -2,6 +2,10 @@
 eb53
 Immigrants so different they can never be fully accepted members of our society
 
+*aging2
+eb713
+The arrival of immigrants in Europe can be effective in solving the problem of Europe’s ageing population
+
 *benefits4
 tt_im2008
 social benefits to immigrants
@@ -108,6 +112,10 @@ All illegal immigrants should all be sent back to their country of origin withou
 eb592; eb53; eb471
 Legally established immigrants from outside the EU should all be sent back to their country of origin
 
+*lexpel_crim2
+eb592
+Legally established immigrants from outside the European Union should be sent back to their country of origin if they have been convicted of serious offences
+
 *ideas4
 lb2002; usgss
 immigrants bring new ideas and cultures
@@ -193,6 +201,14 @@ immigration is more of a problem or more of an opportunity
 *respect4
 tt_im2008
 strongly support teaching mutual respect of immigrants in schools
+
+*lreunite
+eb592
+Legally established immigrants from outside the European Union should have the right to bring members of their immediate family in (OUR COUNTRY)
+
+*lrights2
+eb592
+Legally established immigrants from outside the European Union should have the same social rights as the (NATIONALITY) citizens
 
 *rights4
 tt_im2008
