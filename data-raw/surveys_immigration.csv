@@ -1,15 +1,19 @@
 survey,item,variable,values,to_na,dich
-evs_combo,neigh2,a124_06,"c(1, 0)",NA,TRUE
-tt_im2009,culture2,q7,c(2:2),"c(98,99)",TRUE
-tt_im2010,culture2,q8,c(2:2),"c(98,99)",TRUE
-tt_im2011,culture2,q16,c(2:2),"c(98,99)",TRUE
-wvs_combo,jobs2,c002,c(1:1),NA,TRUE
-wvs_combo,neigh2,a124_06,c(1:1),NA,TRUE
-eb721,poverty2,v188,c(1:1),NA,TRUE
-eb713,labor2,v508,c(2:2),"c(3,4)",TRUE
-eb713,toler2,v510,c(2:2),"c(3,4)",TRUE
-eb713,welfare2,v511,c(2:2),"c(3,4,9)",TRUE
-eb713,lwelfare2,v512,c(2:2),"c(3,4,9)",TRUE
+evs_combo,neigh2,a124_06,c(1:0),,TRUE
+tt_im2009,culture2,q7,c(2:1),"c(98,99)",TRUE
+tt_im2010,culture2,q8,c(2:1),"c(98,99)",TRUE
+tt_im2011,culture2,q16,c(2:1),"c(98,99)",TRUE
+wvs_combo,jobs2,c002,c(1:2),"c(-5:-1, 3)",TRUE
+wvs_combo,neigh2,a124_06,c(1:0),c(-5:-1),TRUE
+eb721,poverty2,v188,c(1:0),,TRUE
+eb713,labor2,v508,c(2:1),"c(3,4)",TRUE
+eb713,aging2,v509,c(2:1),"c(3,4)",TRUE
+eb713,toler2,v510,c(2:1),"c(3,4)",TRUE
+eb713,welfare2,v511,c(2:1),"c(3,4,9)",TRUE
+eb713,lwelfare2,v512,c(2:1),"c(3,4,9)",TRUE
+eb592,lrights2,v226,c(2:1),3,
+eb592,lreunite2,v227,c(2:1),3,
+eb592,lexpel_crim2,v228,c(1:2),3,
 eb592,lexpel2,v230,c(1:1),NA,TRUE
 eb592,iexpel2,v232,c(1:1),NA,TRUE
 eb592,expel2,v235,c(1:1),NA,TRUE
