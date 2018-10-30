@@ -6,6 +6,14 @@ Immigrants so different they can never be fully accepted members of our society
 eb713
 The arrival of immigrants in Europe can be effective in solving the problem of Europe’s ageing population
 
+*asylum3
+eb53
+If people ..., do you think that they should...? (SHOW CARD)
+And what about people suffering from human rights violations in their country, who are seeking political asylum?
+1 Be accepted, without restrictions
+2 Be accepted, but with restrictions
+3 Not be accepted
+
 *benefits4
 tt_im2008
 social benefits to immigrants
@@ -88,6 +96,10 @@ strongly support banning discrimination against immigrants
 eb592
 Immigration makes a positive contribution to cultural diversity
 
+*leasy_nat2
+eb592
+Legally established immigrants from outside the European Union should be able to become naturalised easily
+
 *econ11
 bsa2011; bsa2013; ess_combo
 immigration good for economy
@@ -123,6 +135,10 @@ immigrants bring new ideas and cultures
 *ideas5
 issp2003
 Immigrants improve society by bringing in new ideas
+
+*iindiv2
+eb592
+As regards illegal immigrants, whether they are allowed to stay in (OUR COUNTRY) should always depend on their personal circumstances
 
 *iterror4
 tt_im2009; tt_im2010
@@ -197,6 +213,14 @@ immigrants and/or political asylum seekers are a big problem for (OUR COUNTRY)
 *problem2a
 tt_im2008; tt_im2008; tt_im2009; tt_im2010; tt_im2011; tt2013
 immigration is more of a problem or more of an opportunity
+
+*refugee3
+eb53
+If people ..., do you think that they should...? (SHOW CARD)
+And what about people fleeing from countries where there is serious internal conflict?
+1 Be accepted, without restrictions
+2 Be accepted, but with restrictions
+3 Not be accepted
 
 *respect4
 tt_im2008
