@@ -69,8 +69,16 @@ strongly oppose that immigration will increase crime;
 Immigrants are not responsible for a lot of petty crime
 
 *crime5
-issp1995; issp2003; usgss
+issp1995; issp2003; issp2013; usgss
 immigrants increase crime rates
+
+*culture2
+tt_im2009; tt_im2010; tt_im2011; eb53
+Immigrants enrich our cultural lives
+
+*culture5
+issp2013
+[COUNTRY'S] culture is generally undermined by immigrants.
 
 *culture10
 eqls_combo; evs_combo
@@ -79,14 +87,6 @@ immigration enriches cultural life
 *culture11
 bsa2011; bsa2013; ess_combo
 immigration enriches cultural life
-
-*culture2
-tt_im2009; tt_im2010; tt_im2011; eb53
-Immigrants enrich our cultural lives
-
-*culture4
-tt_im2008; tt2013
-immigrants improve culture with ideas/customs
 
 *discrim4
 tt_im2008
@@ -105,7 +105,7 @@ bsa2011; bsa2013; ess_combo
 immigration good for economy
 
 *econ5
-issp1995; issp2003; usgss
+issp1995; issp2003; issp2013; usgss
 Immigrants are good for the economy
 
 *exclude5
@@ -129,11 +129,11 @@ eb592
 Legally established immigrants from outside the European Union should be sent back to their country of origin if they have been convicted of serious offences
 
 *ideas4
-lb2002; usgss
-immigrants bring new ideas and cultures
+lb2002; usgss; tt_im2008; tt2013
+immigrants improve culture with new ideas/customs
 
 *ideas5
-issp2003
+issp2003, issp2013
 Immigrants improve society by bringing in new ideas
 
 *iindiv2
@@ -157,7 +157,7 @@ bsa2009; tt_im2008; tt_im2009; tt_im2010; tt_im2011; tt2013
 immigrants take jobs away from natives
 
 *jobs5
-bsa1999; issp1995; issp2003; usgss
+bsa1999; issp1995; issp2003; issp2013; usgss
 Immigrants take jobs away from natives
 
 *labor2
@@ -189,7 +189,7 @@ tt_im2009; tt_im2011
 comfortable with immigrant as neighbor
 
 *number5
-bsa2011; bsa2013; issp1995; issp2003; usgss; usgss
+bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss
 "Do you think the number of immigrants to [Britain] nowadays should be increased a lot
  increased a little
  remain the same as it is
