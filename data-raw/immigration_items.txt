@@ -129,11 +129,11 @@ eb592
 Legally established immigrants from outside the European Union should be sent back to their country of origin if they have been convicted of serious offences
 
 *ideas4
-lb2002; usgss; tt_im2008; tt2013
+usgss; tt_im2008; tt2013
 immigrants improve culture with new ideas/customs
 
 *ideas5
-issp2003, issp2013
+issp2003; issp2013; lb2002
 Immigrants improve society by bringing in new ideas
 
 *iindiv2
