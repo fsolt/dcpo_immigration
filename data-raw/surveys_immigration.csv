@@ -139,6 +139,13 @@ mosaic2000,iexpel2,q29_07,c(1:2),-1
 mosaic2000,punish_emp2,q29_08,c(1:2),-1
 mosaic2000,iindiv2,q29_09,c(2:1),-1
 mosaic2000,expel2,q29_10,c(1:2),-1
+pew2002,problem4,q15i,c(1:4),"c(5,6)"
+pew2002,influence4,q35g,c(4:1),"c(5,6)"
+pew2007,problem4,q14h,c(1:4),"c(5,6)"
+pew2007,influence4,q21f,c(4:1),"c(5,6)"
+pew2014,burden2,q85a,c(2:1),"c(3,8,9)"
+pew2014,crime2a,q85b,c(1:2),"c(3,8,9)"
+prri201003_imm,burden2,q7b,c(2:1),"c(3,9)"
 tt_im2008,benefits4,q12_5,c(4:1),"c(5,6)"
 tt_im2008,ideas4,q13_1,c(4:1),"c(5,6)"
 tt_im2008,discrim4,q12_2,c(4:1),"c(5,6)"

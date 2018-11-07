@@ -34,6 +34,9 @@ Immigrants' presence is a good thing for the future of our country
 ess_combo
 immigrants make country better place to live
 
+*burden2
+Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants today make our country stronger because of their work and talents, or Immigrants today are a burden on our country because they take our jobs and social benefits 
+
 *boss4
 tt_im2009; tt_im2011
 very uncomfy with immigrant as boss; very comfy with immigrant as boss
@@ -53,6 +56,10 @@ immigrants increase crime
 *crime2
 eb53
 Immigrants are more often involved in criminality than the average person
+
+*crime2a
+pew2014
+Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants in our country today are more to blame for crime than other groups, or Immigrants in our country today are no more to blame for crime than other groups 
 
 *icrime4
 tt_im2009; tt_im2010
@@ -140,13 +147,9 @@ Immigrants improve society by bringing in new ideas
 eb592
 As regards illegal immigrants, whether they are allowed to stay in (OUR COUNTRY) should always depend on their personal circumstances
 
-*iterror4
-tt_im2009; tt_im2010
-illegal immigrants increase likelihood of terrorist attack
-
-*iworkhard4
-tt_im2009; tt_im2010
-illegal immigrants are hard workers
+*influence4
+pew2007, pew2002
+Please tell me what kind of influence the group is having on the way things are going in our country. Is the influence of immigrants very good, somewhat good, somewhat bad or very bad in our country?
 
 *jobs2
 wvs_combo; eb443
@@ -214,6 +217,10 @@ immigrants and/or political asylum seekers are a big problem for (OUR COUNTRY)
 tt_im2008; tt_im2008; tt_im2009; tt_im2010; tt_im2011; tt2013
 immigration is more of a problem or more of an opportunity
 
+*problem4
+pew2002
+please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all. Immigration.
+
 *refugee3
 eb53
 If people ..., do you think that they should...? (SHOW CARD)
@@ -253,6 +260,10 @@ Immigration increases likelihood of terrorist attack
 *lterror4
 tt_im2009
 Legal immigrants increase likelihood of terrorist attack
+
+*iterror4
+tt_im2009; tt_im2010
+illegal immigrants increase likelihood of terrorist attack
 
 *threat10
 evs_combo
@@ -309,3 +320,7 @@ strongly agree that immigrants are hard workers
 *lworkhard4
 tt_im2009; tt_im2010
 legal immigrants are hard workers
+
+*iworkhard4
+tt_im2009; tt_im2010
+illegal immigrants are hard workers
