@@ -191,6 +191,22 @@ don't like as neighbors: immigrants/foreign workers
 tt_im2009; tt_im2011
 comfortable with immigrant as neighbor
 
+number3
+usicr20040 
+ Do you think there are too many immigrants in the U.S. today, too few, or about the right number of immigrants?
+1 Too many
+2 Too few
+3 About the right number
+
+number3a
+pewrel2017_we
+Do you think the number of immigrants to [COUNTRY] nowadays should be increased, remain the same as it is or be reduced? 
+
+1	Be increased
+2	Remain the same as it is
+3	Be reduced
+
+
 *number5
 bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss
 "Do you think the number of immigrants to [Britain] nowadays should be increased a lot
