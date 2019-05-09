@@ -206,6 +206,12 @@ Do you think the number of immigrants to [COUNTRY] nowadays should be increased,
 2	Remain the same as it is
 3	Be reduced
 
+pew2014
+In your opinion, should we allow more immigrants to move to our country, fewer immigrants, or about the same as we do now? 
+1	More
+2	Fewer
+3	About the same
+
 
 *number5
 bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss
