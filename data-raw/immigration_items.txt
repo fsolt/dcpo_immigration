@@ -53,6 +53,19 @@ Immigrants contribute a lot to our country
 evs_combo
 immigrants increase crime
 
+*impact5
+evs2017, v184
+Now we would like to know your opinion about the people from other countries who come to live in [your country] - the immigrants. How would you evaluate the impact of these people on the development of [your country]?
+1 very bad
+2 quite bad
+3 neither good, nor bad
+4 quite good
+5 very good
+
+*jobs10
+evs2017, v185
+immigrants take away jobs from [nationality]
+
 *crime2
 eb53
 Immigrants are more often involved in criminality than the average person
