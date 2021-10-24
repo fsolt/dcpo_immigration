@@ -3,11 +3,11 @@ eb53
 Immigrants so different they can never be fully accepted members of our society
 
 *aging2
-eb713
+eb713; eb663
 The arrival of immigrants in Europe can be effective in solving the problem of Europe’s ageing population
 
 *asylum3
-eb53
+eb37; eb39; eb53; allbus
 If people ..., do you think that they should...? (SHOW CARD)
 And what about people suffering from human rights violations in their country, who are seeking political asylum?
 1 Be accepted, without restrictions
@@ -24,7 +24,7 @@ social benefits to legal immigrants
 
 *better4
 eb471
-(OUR COUNTRY) benefits from the presence of immigrants from non European Union countries
+Generally speaking, do you think that (OUR COUNTRY) benefits from the presence of immigrants from non European Union countries, or do you think that (OUR COUNTRY) would be better off without them?
 
 *better4a
 eb30
@@ -35,6 +35,7 @@ ess_combo
 immigrants make country better place to live
 
 *burden2
+pew2018; uspew2015
 Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants today make our country stronger because of their work and talents, or Immigrants today are a burden on our country because they take our jobs and social benefits 
 
 *boss4
@@ -46,25 +47,12 @@ eb592
 "Immigrants who continue to follow customs which are against (NATION) values should not be expelled even if they are legally settled"
 
 *contrib4
-eb692; eb661; eb601
+eb692; eb661; eb601; eb833; eb852; eb862
 Immigrants contribute a lot to our country
 
 *crime10
 evs_combo
 immigrants increase crime
-
-*impact5
-evs2017, v184
-Now we would like to know your opinion about the people from other countries who come to live in [your country] - the immigrants. How would you evaluate the impact of these people on the development of [your country]?
-1 very bad
-2 quite bad
-3 neither good, nor bad
-4 quite good
-5 very good
-
-*jobs10
-evs2017, v185
-immigrants take away jobs from [nationality]
 
 *crime2
 eb53
@@ -73,6 +61,13 @@ Immigrants are more often involved in criminality than the average person
 *crime2a
 pew2014
 Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants in our country today are more to blame for crime than other groups, or Immigrants in our country today are no more to blame for crime than other groups 
+
+crime3
+wvs7
+Immigration in your country: Increases the crime rate 
+1. disagree
+2. hard to say
+3. agree
 
 *icrime4
 tt_im2009; tt_im2010
@@ -89,16 +84,24 @@ strongly oppose that immigration will increase crime;
 Immigrants are not responsible for a lot of petty crime
 
 *crime5
-issp1995; issp2003; issp2013; usgss
+issp1995; issp2003; issp2013; usgss; aussa; autnes2017
 immigrants increase crime rates
 
 *culture2
 tt_im2009; tt_im2010; tt_im2011; eb53
 Immigrants enrich our cultural lives
 
+culture4
+eb882
+impact of immigrants on society - enrich (national) cultural life
+
 *culture5
 issp2013
 [COUNTRY'S] culture is generally undermined by immigrants.
+
+culture5a
+autnes2017
+immigants enrich Austrian culture
 
 *culture10
 eqls_combo; evs_combo
@@ -112,6 +115,10 @@ immigration enriches cultural life
 tt_im2008
 strongly support banning discrimination against immigrants
 
+diversity3
+wvs7
+Immigration in your country: Strengthens cultural diversity 
+
 *diversity4
 eb592
 Immigration makes a positive contribution to cultural diversity
@@ -120,25 +127,42 @@ Immigration makes a positive contribution to cultural diversity
 eb592
 Legally established immigrants from outside the European Union should be able to become naturalised easily
 
+*econ4
+eb882
+impact of immigrants on society - positive for nat economy
+Values	Categories
+1	Totally agree
+2	Tend to agree
+3	Tend to disagree	
+4	Totally disagree
+
+*econ5
+issp1995; issp2003; issp2013; usgss; allbus; aussa2013
+Immigrants are good for the economy
+
 *econ11
 bsa2011; bsa2013; ess_combo
 immigration good for economy
 
-*econ5
-issp1995; issp2003; issp2013; usgss
-Immigrants are good for the economy
+enrich4
+eb764
+Immigration enriches (OUR COUNTRY) economically and culturally
 
 *exclude5
 issp1995; issp2003
 The country should take stronger measures to exclude illegal immigrants
 
 *expel2
-eb592; eb53; eb471
+eb592; eb53; eb471; cceb2003_5
 "All immigrants, whether legal or illegal, and their children, even those who were born in our country, should be sent back to their country of origin"
 
 *iexpel2
-eb592; eb53; eb471
+eb592; eb53; eb471; cceb2203_5
 All illegal immigrants should all be sent back to their country of origin without exception
+
+*iexpel2a
+pew2018
+Thinking about immigration, would you support or oppose (survey country) deporting immigrants currently in the country illegally 
 
 *lexpel2
 eb592; eb53; eb471
@@ -152,37 +176,79 @@ Legally established immigrants from outside the European Union should be sent ba
 usgss; tt_im2008; tt2013
 immigrants improve culture with new ideas/customs
 
+*ideas4a
+eb882
+impact of immigrants on society - new ideas and innovation in (country)
+
 *ideas5
 issp2003; issp2013; lb2002
 Immigrants improve society by bringing in new ideas
 
 *iindiv2
-eb592
+eb592; cceb2003_5
 As regards illegal immigrants, whether they are allowed to stay in (OUR COUNTRY) should always depend on their personal circumstances
+
+*impact5
+evs2017, v184; wvs7
+Now we would like to know your opinion about the people from other countries who come to live in [your country] - the immigrants. How would you evaluate the impact of these people on the development of [your country]?
+1 very bad
+2 quite bad
+3 neither good, nor bad
+4 quite good
+5 very good
 
 *influence4
 pew2007, pew2002
 Please tell me what kind of influence the group is having on the way things are going in our country. Is the influence of immigrants very good, somewhat good, somewhat bad or very bad in our country?
 
 *jobs2
-wvs_combo; eb443
+eb443
+"When jobs are scarce, employers should give priority to [NATION] people over immigrants"
+
+*jobs2a
+amb_combo; cbsnyt199306
+"Which comes closer to your view? Foreigners take jobs away from citizens OR Foreigners do jobs citizens don't want"
+
+jobs3
 "When jobs are scarce, employers should give priority to [NATION] people over immigrants"
 
 *jobs4
-bsa2009; tt_im2008; tt_im2009; tt_im2010; tt_im2011; tt2013
+bsa2009; tt_im2008; tt_im2009; tt_im2010; tt_im2011; tt2013; eb882
 immigrants take jobs away from natives
 
 *jobs5
-bsa1999; issp1995; issp2003; issp2013; usgss
+bsa1999; issp1995; issp2003; issp2013; usgss; aussa2013; lb2002
 Immigrants take jobs away from natives
+
+jobs5a
+wvs7; nsss1984
+"When jobs are scarce, employers should give priority to [NATION] people over immigrants"
+
+
+jobs5b
+lb2002; lb2009; lb2010
+What do you think is the impact that foreign nationals coming to live in (country)?  They come to compete for our jobs
+
+*jobs10
+evs2017, v185
+immigrants take away jobs from [nationality]
 
 *labor2
 eb713; eb663
 We need immigrants to work in certain sectors of our economy
 
+labor3
+wvs7
+Immigration in your country: Fills useful jobs in the workforce 
+
+
 *labor4
 eb642; eb621; eb592
 We need immigrants to work in certain sectors of our economy
+
+*labor4a
+eb882
+impact of immigrants on society - help to fill jobs
 
 *land5
 issp2003
@@ -197,12 +263,31 @@ tt_im2009; tt_im2011
 very comfortable with relative married/inrelations with immigrant
 
 *neigh2
-evs_combo; wvs_combo
+evs_combo; wvs_combo; arabb1; arabb2
 don't like as neighbors: immigrants/foreign workers
 
 *neigh4
-tt_im2009; tt_im2011
+tt_im2009; tt_im2011; amb_combo; amb_X2018; eb882
 comfortable with immigrant as neighbor
+
+neigh5
+arabb4; arabb5
+For each of the following types of people, please tell me how much you would like having people from this group as your neighbors.1 Strongly dislike
+2 Dislike
+3 Neither dislike, nor like
+4 Like
+5 Strongly like
+
+number2
+jgss
+View on Increasing Foreign Population
+1 For
+2 Against
+
+number2a
+Many foreigners live in Germany. Do you find that
+1 okay
+2 not okay
 
 number3
 usicr20040 
@@ -212,37 +297,78 @@ usicr20040
 3 About the right number
 
 number3a
-pewrel2017_we
+pewrel2017_we; cbsnyt199306
 Do you think the number of immigrants to [COUNTRY] nowadays should be increased, remain the same as it is or be reduced? 
-
 1	Be increased
 2	Remain the same as it is
 3	Be reduced
-
 pew2014
 In your opinion, should we allow more immigrants to move to our country, fewer immigrants, or about the same as we do now? 
 1	More
 2	Fewer
 3	About the same
 
+number3b
+eb30; eb42; eb48; cceb2002
+Generally speaking, how do you feel about foreigners living in (OUR COUNTRY): are there too many, a lot but not too many, or not many?
+1 Too many
+2 A lot, but not too many
+3 Not many
+
+number3c
+Generally speaking, how do you feel about people living in (OUR COUNTRY) who are not nationals of the European Community countries : are there too many, a lot but not too many or not many?
+
+number4
+Do you think the government should increase or decrease the inflow of foreign immigrants into the country? (NEW) <OPTIONAL> 
+1 The government should increase the inflow of immigrants
+2 The government should maintain the current inflow of immigrants
+3 The government should reduce the inflow of immigrants
+4 The government should not allow any more immigrants
 
 *number5
-bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss
+bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss; aussa2003, aussa2005, aes; anes_combo
 "Do you think the number of immigrants to [Britain] nowadays should be increased a lot
  increased a little
  remain the same as it is
- reduced a little or reduced a lot?; Decrease number of immigrants coming into the counry; Decrease number of immigrants coming into the counry; Decrease number of immigrants coming into the counry; Decrease number of immigrants coming into the counry; Do you think the number of immigrants to [Britain] nowadays should be increased a lot
- increased a little
- remain the same as it is
  reduced a little or reduced a lot?"
+
+number5a
+aes1990, aes1996, aes1998, aes2001, aes2004, aes2007, aes2010, aes2013
+The statements below indicate some of the changes that have been happening in Australia over the years. For each one, please say whether you think the change has gone too far, not gone far enough, or is it about right?
+The number of migrants allowed into Australia at the present time
 
 *policy4
 wvs_combo
 How about people from other countries coming here to work. Which one of the following do you think the government should do? Prohibit people from coming
 
+*policy4a
+pew2007
+We should restrict and control entry of people into our country more than we do now
+
+policy4b
+wvs7
+Immigration policy preference 
+1. let anyone come who wants to
+2. Let people come as long as there are jobs
+3. Place strict limits on the number of foriegners
+4. Prohibit people coming here from other
+
+policy5
+lb2002
+There ought to be laws to prevent immigrants entry into (Country)
+
 *poverty2
 eb721
 Which are the 2 main factors generating poverty: immigration
+
+poverty5
+eb561
+The government should do more to reduce the risk of poverty and social exclusion among new immigrants
+
+presence2
+Some people are disturbed by the opinions, customs and way of life of people different from themselves.  Do you personally find the presence of people of another nationality, disturbing in your daily life?
+1 Disturbing
+2 Not disturbing
 
 *problem2
 eb411; eb39
@@ -263,6 +389,15 @@ And what about people fleeing from countries where there is serious internal con
 1 Be accepted, without restrictions
 2 Be accepted, but with restrictions
 3 Not be accepted
+
+*refugee4
+eb915
+[COUNTRY] should help refugees
+1	Totally agree	
+2	Tend to agree	 
+3	Tend to disagree	 
+4	Totally disagree
+
 
 *respect4
 tt_im2008
@@ -288,6 +423,10 @@ strongly support rights to legal immigrants
 issp2003
 Governments spends too much money assisting immigrants
 
+*terror2
+pew2018
+Immigrants today increase the risk of terrorism in our country [OR] Immigrants today do not increase the risk of terrorism in our country 
+
 *terror4
 tt_im2008
 Immigration increases likelihood of terrorist attack
@@ -300,6 +439,12 @@ Legal immigrants increase likelihood of terrorist attack
 tt_im2009; tt_im2010
 illegal immigrants increase likelihood of terrorist attack
 
+*services5
+amb_combo; amb_X2018
+To what extent do you agree that the [nationality] government
+   should offer social services, like health assistance, education,
+   housing to immigrants who come to live or work in [country]
+
 *threat10
 evs_combo
 immigrants will not become a threat to society
@@ -308,9 +453,21 @@ immigrants will not become a threat to society
 tt2003; tt2005; tt2005; tt2006
 large numbers of immigrants important threat to [country]
 
+*threat3a
+pew2020
+Do you think that each of the following is a major threat, a minor threat, or not a threat to (survey country)?  large numbers of people moving from one country to another
+
 *threat4
 tt2006
 large numbers of immigrants important threat to [country]
+
+threat4a
+neb_combo
+Do you think any of these pose a real threat to peace and order in this society: immigrants/refugees from other societies 
+1. Big threat
+2. Some threat 
+3. Little threat 
+4. No threat
 
 *toler2
 eb713
@@ -321,12 +478,14 @@ tt_im2008; tt_im2010; tt_im2011; tt2013
 There are too many immigrants in our country
 
 *toomany4
-eb592
+eb592; ptvs2012
 There are too many immigrants in our country
 
 *toomany5
-eb21; evs_combo
+evs_combo
 There are too many immigrants in our country
+eb21
+we have too many immigrant workers
 
 *vote4
 tt_im2008
@@ -347,6 +506,10 @@ Immigrants do not contribute more taxes than they benefit from health and welfar
 *lwelfare2
 eb713
 Legal Immigrants do not contribute more taxes than they benefit from health and welfare services
+
+*welfare4
+eb882
+impact of immigrants on society - burden on welfare system
 
 *workhard4
 tt_im2008
