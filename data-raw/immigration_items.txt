@@ -6,6 +6,13 @@ Immigrants so different they can never be fully accepted members of our society
 eb713; eb663
 The arrival of immigrants in Europe can be effective in solving the problem of Europe’s ageing population
 
+aging4
+The arrival of immigrants in Europe can efficiently solve the problem of Europe’s aging population
+1 Totally agree
+2 Tend to agree
+3 Tend to disagree
+4 Totally disagree
+
 *asylum3
 eb37; eb39; eb53; allbus
 If people ..., do you think that they should...? (SHOW CARD)
@@ -245,8 +252,6 @@ Immigration in your country: Fills useful jobs in the workforce
 *labor4
 eb642; eb621; eb592
 We need immigrants to work in certain sectors of our economy
-
-*labor4a
 eb882
 impact of immigrants on society - help to fill jobs
 
@@ -309,7 +314,7 @@ In your opinion, should we allow more immigrants to move to our country, fewer i
 3	About the same
 
 number3b
-eb30; eb42; eb48; cceb2002
+eb30; eb42; eb48; cceb2002; tt_im2008; tt_im2010; tt_im2011; tt2013
 Generally speaking, how do you feel about foreigners living in (OUR COUNTRY): are there too many, a lot but not too many, or not many?
 1 Too many
 2 A lot, but not too many
@@ -325,12 +330,22 @@ Do you think the government should increase or decrease the inflow of foreign im
 3 The government should reduce the inflow of immigrants
 4 The government should not allow any more immigrants
 
+*number4a
+eb592; ptvs2012
+There are too many immigrants in our country
+
 *number5
 bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss; aussa2003, aussa2005, aes; anes_combo
 "Do you think the number of immigrants to [Britain] nowadays should be increased a lot
  increased a little
  remain the same as it is
  reduced a little or reduced a lot?"
+
+*number5b
+evs_combo
+There are too many immigrants in our country
+eb21
+we have too many immigrant workers
 
 number5a
 aes1990, aes1996, aes1998, aes2001, aes2004, aes2007, aes2010, aes2013
@@ -452,10 +467,15 @@ immigrants will not become a threat to society
 *threat3
 tt2003; tt2005; tt2005; tt2006
 large numbers of immigrants important threat to [country]
+1. Extremely important threat to Europe/US in the next 10 years
+2. Important threat
+3. Not important threat
 
-*threat3a
 pew2020
 Do you think that each of the following is a major threat, a minor threat, or not a threat to (survey country)?  large numbers of people moving from one country to another
+1. major threat
+2. minor threat
+3. not a threat
 
 *threat4
 tt2006
@@ -473,19 +493,6 @@ Do you think any of these pose a real threat to peace and order in this society:
 eb713
 Immigrants cannot play an important role in developing greater understanding and tolerance of the rest of the world
 
-*toomany3
-tt_im2008; tt_im2010; tt_im2011; tt2013
-There are too many immigrants in our country
-
-*toomany4
-eb592; ptvs2012
-There are too many immigrants in our country
-
-*toomany5
-evs_combo
-There are too many immigrants in our country
-eb21
-we have too many immigrant workers
 
 *vote4
 tt_im2008
