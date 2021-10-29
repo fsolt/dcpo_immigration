@@ -45,6 +45,13 @@ immigrants make country better place to live
 pew2018; uspew2015
 Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants today make our country stronger because of their work and talents, or Immigrants today are a burden on our country because they take our jobs and social benefits 
 
+burden4
+Here are some pairs of statements. Please tell me whether the FIRST statement or the SECOND statement comes closer to your own views — even if neither is exactly right. The first pair is... Immigrants today make our country stronger because of their work and talents, or Immigrants today are a burden on our country because they take our jobs and social benefits 
+1 A strongly
+2 A not strongly
+3 B strongly
+4 B not strongly
+
 *boss4
 tt_im2009; tt_im2011
 very uncomfy with immigrant as boss; very comfy with immigrant as boss
@@ -213,7 +220,7 @@ eb443
 "When jobs are scarce, employers should give priority to [NATION] people over immigrants"
 
 *jobs2a
-amb_combo; cbsnyt199306
+amb_combo; cbsnyt199306; 
 "Which comes closer to your view? Foreigners take jobs away from citizens OR Foreigners do jobs citizens don't want"
 
 jobs3
@@ -289,10 +296,6 @@ View on Increasing Foreign Population
 1 For
 2 Against
 
-number2a
-Many foreigners live in Germany. Do you find that
-1 okay
-2 not okay
 
 number3
 usicr20040 
@@ -314,14 +317,15 @@ In your opinion, should we allow more immigrants to move to our country, fewer i
 3	About the same
 
 number3b
-eb30; eb42; eb48; cceb2002; tt_im2008; tt_im2010; tt_im2011; tt2013
+eb30; eb42; eb48; cceb2002; tt_im2008; tt_im2010; tt_im2011; tt2013; politbarometer_combo
 Generally speaking, how do you feel about foreigners living in (OUR COUNTRY): are there too many, a lot but not too many, or not many?
 1 Too many
 2 A lot, but not too many
 3 Not many
 
 number3c
-Generally speaking, how do you feel about people living in (OUR COUNTRY) who are not nationals of the European Community countries : are there too many, a lot but not too many or not many?
+eb35; eb39; tt_im2009
+Generally speaking, how do you feel about people living in (OUR COUNTRY) who are not nationals of the European Community/citizens of European Union countries : are there too many, a lot but not too many or not many?
 
 number4
 Do you think the government should increase or decrease the inflow of foreign immigrants into the country? (NEW) <OPTIONAL> 
@@ -341,32 +345,31 @@ bsa2011; bsa2013; issp1995; issp2003; issp2013; usgss; usgss; aussa2003, aussa20
  remain the same as it is
  reduced a little or reduced a lot?"
 
+number5a
+aes1990, aes1996, aes1998, aes2001, aes2004, aes2007, aes2010, aes2013
+The statements below indicate some of the changes that have been happening in Australia over the years. For each one, please say whether you think the change has gone too far, not gone far enough, or is it about right?
+The number of migrants allowed into Australia at the present time
+
 *number5b
 evs_combo
 There are too many immigrants in our country
 eb21
 we have too many immigrant workers
 
-number5a
-aes1990, aes1996, aes1998, aes2001, aes2004, aes2007, aes2010, aes2013
-The statements below indicate some of the changes that have been happening in Australia over the years. For each one, please say whether you think the change has gone too far, not gone far enough, or is it about right?
-The number of migrants allowed into Australia at the present time
-
 *policy4
-wvs_combo
-How about people from other countries coming here to work. Which one of the following do you think the government should do? Prohibit people from coming
+wvs_combo, wvs4_swe, wvs7
+How about people from other countries coming here to work. Which one of the following do you think the government should do? 
+1 Let anyone come who wants to
+2 Let people come as long as there are jobs
+3 Place strict limits on the number of foreigners
+4 Prohibit people from coming
 
 *policy4a
 pew2007
 We should restrict and control entry of people into our country more than we do now
-
-policy4b
-wvs7
-Immigration policy preference 
-1. let anyone come who wants to
-2. Let people come as long as there are jobs
-3. Place strict limits on the number of foriegners
-4. Prohibit people coming here from other
+1 Completely agree             
+2 Mostly agree          
+3 Mostly disagree 4 Completely disagree
 
 policy5
 lb2002
@@ -470,7 +473,6 @@ large numbers of immigrants important threat to [country]
 1. Extremely important threat to Europe/US in the next 10 years
 2. Important threat
 3. Not important threat
-
 pew2020
 Do you think that each of the following is a major threat, a minor threat, or not a threat to (survey country)?  large numbers of people moving from one country to another
 1. major threat
@@ -489,6 +491,10 @@ Do you think any of these pose a real threat to peace and order in this society:
 3. Little threat 
 4. No threat
 
+*threat4b
+eb601
+Immigrants are a threat to our way of life
+
 *toler2
 eb713
 Immigrants cannot play an important role in developing greater understanding and tolerance of the rest of the world
@@ -498,13 +504,17 @@ Immigrants cannot play an important role in developing greater understanding and
 tt_im2008
 strongly support that immigrants should have right to vote
 
-*way4
-eb601
-Immigrants are a threat to our way of life
-
 *welfare10
-eqls_combo; evs_combo
+evs_combo
 immigrants are a strain on our welfare system
+1 are a strain
+10 are not a strain
+
+welfare10a
+eqls_combo
+immigrants are a strain on our welfare system
+1 are a strain on our welfare system
+10 contribute to our welfare system
 
 *welfare2
 eb713
