@@ -314,3 +314,393 @@ dcpo_input_neigh2 <- DCPOtools::format_dcpo(dcpo_input_raw_imm1,
 save(dcpo_input_neigh2, file = here::here("data", "dcpo_input_neigh2.rda"))
 ```
 
+```{r dcpo, eval=FALSE}
+iter <- 4000
+
+dcpo_input <- dcpo_input_neigh2
+
+dcpo_output <- dcpo(dcpo_input,
+                    iter = iter,
+                    chains = 4,
+                    thin = iter/500, # this yields 250 draws per chain, 1000 draws total
+                    pars = c("sd_delta","sd_theta_evolve", "sd_sigma_evolve", "sigma","phi","beta","alpha","delta","theta","y_r_pred","log_lik"))
+```
+
+```{r dcpo_results, cache=TRUE}
+load(here::here("data", "neigh2_1k_10-28.rda"))
+
+save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
+
+save(dcpo_output, file = here::here("data", "dcpo_output.rda"))
+```
+
+```{r dcpo_results_summary, cache=TRUE, cache.extra = tools::md5sum(here::here("data", "dcpo_output.rda"))}
+load(here::here("data", "dcpo_input.rda"))
+load(here::here("data", "dcpo_output.rda"))
+
+theta_results <- DCPO::summarize_dcpo_results(dcpo_input,
+                                              dcpo_output,
+                                              "theta")
+
+res_cy <- nrow(theta_results) %>% 
+  scales::comma()
+
+res_c <- theta_results %>% 
+  pull(country) %>% 
+  unique() %>% 
+  length()
+```
+
+
+```{r cs_plot, fig.cap="PGE Scores, Most Recent Available Year \\label{cs_mry}", fig.height=10, fig.width=8}
+
+n_panes <- 2
+axis_text_size <- 10
+
+p1_data <- theta_results %>%
+  group_by(country) %>%
+  top_n(1, year) %>%
+  ungroup() %>%
+  arrange(mean) %>%
+  transmute(country_year = paste0(country, " (", year, ")") %>% 
+              str_replace("’", "'"),
+            estimate = mean,
+            conf.high = `90%`,
+            conf.low = `10%`,
+            pane = n_panes - (ntile(mean, n_panes) - 1),
+            ranked = as.factor(ceiling(row_number())))
+
+p_theta <- ggplot(p1_data,
+                  aes(x = estimate, y = ranked)) +
+  geom_segment(aes(x = conf.low, xend = conf.high,
+                   y = ranked, yend = ranked),
+               na.rm = TRUE,
+               alpha = .4) +
+  geom_point(fill = "black", shape = 21, size = .5, na.rm = TRUE) +
+  theme_bw() + theme(legend.position="none",
+                     axis.text.x  = element_text(size = axis_text_size,
+                                                 angle = 90,
+                                                 vjust = .45,
+                                                 hjust = .95),
+                     axis.text.y  = element_text(size = axis_text_size),
+                     axis.title = element_blank(),
+                     strip.background = element_blank(), 
+                     strip.text = element_blank(),
+                     panel.grid.major = element_line(size = .3),
+                     panel.grid.minor = element_line(size = .15)) +
+  scale_y_discrete(breaks = p1_data$ranked, labels=p1_data$country_year) +
+  coord_cartesian(xlim=c(0, 1)) +
+  facet_wrap(vars(pane), scales = "free", nrow = 1)
+
+
+p_theta +
+  plot_annotation(caption = "Note: Gray whiskers represent 80% credible intervals.")
+
+bottom5 <- p1_data %>% 
+  arrange(ranked) %>% 
+  slice(1:5) %>% 
+  pull(country_year) %>% 
+  str_replace(" \\(.*", "") %>% 
+  str_replace("Palestinian", "the Palestinian") %>% 
+  knitr::combine_words()
+
+```
+
+We used the `DCPO` package for R [@Solt2020a] to estimate this model on the public gender egalitarianism source data described above.
+The dispersion parameters of the survey items indicate that all of them load well on the latent variable (see online Appendix A).
+The result is estimates, in all `r res_cy` country-years spanned by the source data, of mean public gender egalitarianism, what we call PGE scores.^[
+To provide further confirmation of the unidimensionality of public gender egalitarianism, we estimated two separate indices of gender egalitarianism in politics and in the workplace.  These indices correlate very highly with the PGE scores and with each other, reinforcing the conclusion that public gender egalitarianism exists as a single dimension across countries and years; see online Appendix C.]
+Figure&nbsp;\ref{cs_mry} displays the most recent available PGE score for each of the `r res_c` countries and territories in the dataset.
+
+The Scandinavian countries and France are at the top of this list, along with Puerto Rico, which has had women of both of its major parties serve as chief executive and as recently as 2020 had a woman from each party holding the two most prominent elected offices on the island.
+The latest scores for `r bottom5` have them as the places where public opinion is least favorable to gender equality in the public sphere.
+
+```{r ts_plots, fig.cap="PGE Scores Over Time Within Selected Countries \\label{ts}", fig.height=3.5}
+countries <- c("Norway", "Australia", "United States", "Argentina",
+               "Brazil", "Poland", "South Africa", "Japan",
+               "Sweden", "Denmark", "Germany", "Greece",
+               "Mexico", "Canada", "Turkey", "Pakistan")
+
+countries2 <- countries %>% 
+  str_replace("United States", "U.S.")
+
+theta_results %>%
+  filter(country %in% countries) %>%
+  mutate(country = str_replace(country, "United States", "U.S.") %>% 
+           factor(levels = countries2)) %>% 
+  ggplot(aes(x = year, y = mean)) +
+  geom_ribbon(aes(ymin = `10%`, ymax = `90%`, linetype=NA), alpha = .25) +
+  geom_line() +
+  theme_bw() +
+  theme(legend.position="none") +
+  coord_cartesian(xlim = c(1980, 2020), ylim = c(0, 1)) +
+  labs(x = NULL, y = "PGE Scores") +
+  facet_wrap(~country, nrow = 2) +
+  theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
+  plot_annotation(caption = "Note: Countries are ordered by their PGE scores in their most recent\navailable year; gray shading represents 80% credible intervals.")
+```
+
+Figure&nbsp;\ref{ts} displays how PGE scores have changed over time in sixteen countries.
+Like Figure&nbsp;\ref{cs_mry}, it underscores the geographic breadth of the PGE dataset, which allows the study of countries and regions too often neglected in political science research [see @Wilson2021].
+The figure also shows that while public opinion favoring gender equality in the public sphere has risen steadily in some countries, such as Norway and Australia, attitudes have changed little over time in others, like South Korea and the Philippines, or fallen, as in Indonesia. 
+They have even advanced and retreated as in Brazil or have declined and recovered as in Nigeria.
+There is much to do to explain the causes and consequences of these trends in public gender egalitarianism.
+
+# Validating Public Gender Egalitarianism
+
+```{r extract_res}
+dat <- dcpo_input$data
+
+qcodes <- dat %>%
+  dplyr::group_by(question) %>%
+  dplyr::summarize(qq = first(qq) %>%
+                     as.numeric())
+
+kcodes <- dat %>%
+  dplyr::group_by(country) %>%
+  dplyr::summarize(kk = first(kk) %>%
+                     as.numeric())
+
+tcodes <- dat %>%
+  dplyr::group_by(year) %>%
+  dplyr::summarize(tt = first(tt))
+
+ktcodes <- dat %>%
+  dplyr::group_by(country) %>%
+  dplyr::summarize(first_yr = min(year),
+                   last_yr = max(year))
+
+theta_res <- rstan::extract(dcpo_output, pars = "theta") %>%
+        dplyr::first() %>%
+        purrr::array_branch(1) %>%
+        purrr::map(function(x) {
+          tibble::as_tibble(x) %>%
+          dplyr::mutate(tt = row_number()) %>%
+            dplyr::left_join(tcodes, by = "tt") %>%
+            tidyr::pivot_longer(cols = starts_with("V"),
+                                names_to = "kk",
+                                values_to = "pge_mean") %>%
+            dplyr::mutate(year = if_else(tt == 1,
+                                         as.numeric(year),
+                                         min(year, na.rm = TRUE) + tt - 1),
+                          kk = str_replace(kk, "V", "") %>% as.numeric()) %>%
+            dplyr::left_join(kcodes, by = "kk") %>%
+            dplyr::left_join(ktcodes, by = "country") %>%
+            dplyr::filter(year >= first_yr & year <= last_yr) %>%
+            dplyr::arrange(kk, tt) %>%
+            dplyr::select(country, year, pge_mean)
+        })
+
+sigma_res <- rstan::extract(dcpo_output, pars = "sigma") %>%
+        dplyr::first() %>%
+        purrr::array_branch(1) %>%
+        purrr::map(function(x) {
+          tibble::as_tibble(x) %>%
+          dplyr::mutate(tt = row_number()) %>%
+            dplyr::left_join(tcodes, by = "tt") %>%
+            tidyr::pivot_longer(cols = starts_with("V"),
+                                names_to = "kk",
+                                values_to = "pge_polarization") %>%
+            dplyr::mutate(year = if_else(tt == 1,
+                                         as.numeric(year),
+                                         min(year, na.rm = TRUE) + tt - 1),
+                          kk = str_replace(kk, "V", "") %>% as.numeric()) %>%
+            dplyr::left_join(kcodes, by = "kk") %>%
+            dplyr::left_join(ktcodes, by = "country") %>%
+            dplyr::filter(year >= first_yr & year <= last_yr) %>%
+            dplyr::arrange(kk, tt) %>%
+            dplyr::select(country, year, pge_polarization)
+        })
+
+pge <- map2(theta_res, sigma_res, function(theta, sigma) {
+  left_join(theta, sigma, by = c("country", "year"))
+})
+
+save(pge, file = here::here("data", "pge.rda"))
+```
+
+```{r convergent_setup, cache = TRUE, cache.extra = tools::md5sum(here::here("data", "pge.rda"))}
+
+internal_dat <- dcpo_input$data %>% 
+  filter(item == "polileader4 3 or higher") %>% 
+  mutate(prop = 1 - y_r/n_r,
+         se = sqrt((prop*(1-prop))/n),
+         prop_90 = prop + qnorm(.9)*se,
+         prop_10 = prop - qnorm(.9)*se) %>% 
+  left_join(theta_results %>% select(-kk, -tt), by = c("country", "year"))
+
+pge_polileader <- pge %>% 
+  map(. %>% right_join(dcpo_input$data %>% 
+                         filter(item == "polileader4 3 or higher") %>% 
+                         rowwise() %>% 
+                         transmute(country = country,
+                                   year = year,
+                                   prop = 1 - y_r/n_r,
+                                   se = sqrt((prop*(1-prop))/n),
+                                   polileader = rnorm(1, mean = prop, sd = se)), 
+                       by = c("country", "year")))
+
+internal_cor <- map(pge_polileader, function(x) with(x, cor(pge_mean, polileader))) %>% 
+  unlist() %>% 
+  mean() %>% 
+  round(2) %>% 
+  paste0("R = ", .)
+
+internal_label <- tibble(mean = .78, prop = .99, label = internal_cor)
+
+internal_plot <- internal_dat %>% 
+  ggplot(aes(x = mean,
+             y = prop * 100)) +
+  geom_segment(aes(x = `10%`, xend = `90%`,
+                   y = prop * 100, yend = prop * 100),
+               na.rm = TRUE,
+               alpha = .2) +
+  geom_segment(aes(x = mean, xend = mean,
+                   y = prop_90 * 100, yend = prop_10 * 100),
+               na.rm = TRUE,
+               alpha = .2) +
+  geom_smooth(method = 'lm', se = FALSE) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  coord_cartesian(ylim=c(0,100)) +
+  scale_x_continuous(breaks=seq(.1, .9, 0.2)) +
+  labs(x = "PGE Score", 
+       y = '% Agreeing That "On the Whole, Men\nMake Better Political Leaders than Women Do"') + 
+  ggtitle("All Country-Years") +
+  geom_label(data = internal_label, aes(label = label), size = 3)
+
+## Cross-sectional
+internal_poliequal <- dcpo_input$data %>% 
+  filter(item == "poliequal3 2 or higher" & year == 2007) %>% 
+  mutate(iso2c = countrycode::countrycode(country,
+                             origin = "country.name",
+                             destination = "iso2c"),
+         prop = 1 - y_r/n_r,
+         se = sqrt((prop*(1-prop))/n),
+         prop_90 = prop + qnorm(.9)*se,
+         prop_10 = prop - qnorm(.9)*se) %>% 
+  left_join(theta_results %>% select(-kk, -tt), by = c("country", "year"))
+
+pge_poliequal <- pge %>% 
+  map(. %>% right_join(dcpo_input$data %>% 
+                         filter(item == "poliequal3 2 or higher" & year == 2007) %>% 
+                         rowwise() %>% 
+                         transmute(country = country,
+                                   year = year,
+                                   prop = 1 - y_r/n_r,
+                                   se = sqrt((prop*(1-prop))/n),
+                                   poliequal = rnorm(1, mean = prop, sd = se)), 
+                       by = c("country", "year")))
+
+internal_cs_cor <- map(pge_poliequal, 
+                       function(x) with(x, cor(pge_mean, poliequal))) %>% 
+  unlist() %>% 
+  mean() %>% 
+  round(2) %>% 
+  paste0("R = ", .)
+
+internal_cs_label <- tibble(mean = .7, prop = .73, label = internal_cs_cor)
+
+internal_cs_plot <- internal_poliequal %>% 
+  ggplot(aes(x = mean,
+             y = prop * 100)) +
+  geom_segment(aes(x = `10%`, xend = `90%`,
+                   y = prop * 100, yend = prop * 100),
+               na.rm = TRUE,
+               alpha = .2) +
+  geom_segment(aes(x = mean, xend = mean,
+                   y = prop_90 * 100, yend = prop_10 * 100),
+               na.rm = TRUE,
+               alpha = .2) +
+  geom_text(aes(label = iso2c), size = 2) +
+  geom_smooth(method = 'lm', se = FALSE) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  labs(x = "PGE Score", 
+       y = '% Opining That "Men Generally Make\nBetter Political Leaders Than Women"') + 
+  ggtitle("Pew Global Spring 2007") +
+  geom_label(data = internal_cs_label, aes(label = label), size = 3)
+
+# Longitudinal
+internal_us <- dcpo_input$data %>% 
+  filter(item == "emopoli2 2 or higher") %>% 
+  mutate(prop = y_r/n_r,
+         se = sqrt((prop*(1-prop))/n),
+         prop_90 = prop + qnorm(.9)*se,
+         prop_10 = prop - qnorm(.9)*se) %>% 
+  right_join(theta_results %>% 
+               select(-kk, -tt) %>%
+               filter(country == "United States"),
+             by = c("country", "year"))
+
+pge_emopoli <- pge %>% 
+  map(. %>% right_join(dcpo_input$data %>% 
+                         filter(item == "emopoli2 2 or higher") %>% 
+                         rowwise() %>% 
+                         transmute(country = country,
+                                   year = year,
+                                   prop = y_r/n_r,
+                                   se = sqrt((prop*(1-prop))/n),
+                                   emopoli = rnorm(1, mean = prop, sd = se)), 
+                       by = c("country", "year")))
+
+internal_us_cor <- map(pge_emopoli, function(x) with(x, cor(pge_mean, emopoli))) %>% 
+  unlist() %>% 
+  mean() %>% 
+  round(2) %>% 
+  paste0("R = ", .)
+
+internal_us_label <- tibble(year = 1980, mean = .87, label = internal_us_cor)
+
+internal_us_plot <- internal_us %>% 
+  ggplot(aes(x = year,
+             y = mean)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = `10%`,
+                  ymax = `90%`,
+                  linetype = NA),
+               alpha = .2) +
+  geom_point(aes(y = prop),
+             fill = "black",
+             shape = 21,
+             size = .5,
+             na.rm = TRUE) +
+  geom_path(aes(y = prop),
+            linetype = 3,
+            na.rm = TRUE,
+            alpha = .7) +
+  geom_segment(aes(x = year, xend = year,
+                   y = prop_90, yend = prop_10),
+               na.rm = TRUE,
+               alpha = .2) +
+  annotate("text", x = 1979, y = .7, size = 2,
+           label = 'U.S. GSS') +
+  annotate("text", x = 2012, y = .60, size = 2,
+           label = "PGE") +
+  labs(x = "Year", 
+       y = "Score") +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.text  = element_text(size=8),
+        axis.title = element_text(size=9),
+        plot.title = element_text(hjust = 0.5, size = 11)) +
+  ggtitle("United States") +
+  geom_label(data = internal_us_label, aes(label = label), size = 3)
+
+```
+
+```{r convergent, cache = TRUE, cache.extra = tools::md5sum(here::here("data", "pge.rda")), fig.cap="Convergent Validation: Correlations Between PGE Scores and Individual PGE Source Data Survey Items \\label{conv_plot}", fig.height=4}
+
+internal_plot + internal_cs_plot + internal_us_plot +
+  plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
+```
