@@ -122,7 +122,7 @@ eqls_combo; evs_combo
 immigration enriches cultural life
 
 *culture11
-bsa2011; bsa2013; ess_combo
+bsa2011; bsa2013; ess_combo; som_combo
 immigration enriches cultural life
 
 *discrim4
@@ -151,7 +151,7 @@ Values	Categories
 4	Totally disagree
 
 *econ5
-issp1995; issp2003; issp2013; usgss; allbus; aussa2013
+issp1995; issp2003; issp2013; usgss; allbus; aussa2013; ptvs2008
 Immigrants are good for the economy
 
 *econ11
@@ -220,7 +220,7 @@ eb443
 "When jobs are scarce, employers should give priority to [NATION] people over immigrants"
 
 *jobs2a
-amb_combo; cbsnyt199306; gallup199902a
+amb_combo; cbsnyt199306; gallup198606; gallup199902a
 "Which comes closer to your view? Foreigners take jobs away from citizens OR Foreigners do jobs citizens don't want"
 
 jobs3
@@ -273,6 +273,11 @@ We should legalize the status of illegal immigrants who have been working in our
 *marry4
 tt_im2009; tt_im2011
 very comfortable with relative married/inrelations with immigrant
+
+*marry4a
+som_combo
+I would not appreciate having an immigrant marrying into the family 
+
 
 *neigh2
 evs_combo; wvs_combo; arabb1; arabb2
@@ -369,6 +374,16 @@ There are too many immigrants in our country
 eb21
 we have too many immigrant workers
 
+number5c
+so_combo
+This is important for many. How important do you think it feels to you personally? Less immigration
+
+      1. Very important
+      2. Quite important
+      3. Not very important
+      4. Not important at all (good now)
+      5. Rather the opposite
+
 *policy4
 wvs_combo, wvs4_swe, wvs7
 How about people from other countries coming here to work. Which one of the following do you think the government should do? 
@@ -397,6 +412,7 @@ eb561
 The government should do more to reduce the risk of poverty and social exclusion among new immigrants
 
 presence2
+eb39
 Some people are disturbed by the opinions, customs and way of life of people different from themselves.  Do you personally find the presence of people of another nationality, disturbing in your daily life?
 1 Disturbing
 2 Not disturbing
@@ -428,6 +444,24 @@ eb915
 2	Tend to agree	 
 3	Tend to disagree	 
 4	Totally disagree
+
+*refugee5
+som_combo
+Below is a number of proposals that have appeared in the political debate. What is your opinion on each of them? - Accept more refugees into Sweden
+1 Very good proposal 
+2 Rather good proposal
+3 Neither good nor bad                   
+4 Rather bad proposal
+5 Very bad proposal
+
+*refugee5a
+som_combo
+Below is a number of proposals that have appeared in the political debate. What is your opinion on each of them? - Accept fewer refugees into Sweden
+1 Very good proposal 
+2 Rather good proposal
+3 Neither good nor bad                   
+4 Rather bad proposal
+5 Very bad proposal
 
 
 *respect4
@@ -507,6 +541,8 @@ Do you think any of these pose a real threat to peace and order in this society:
 *threat4b
 eb601
 Immigrants are a threat to our way of life
+som_combo
+Immigration is a threat to Swedish values and culture
 
 *toler2
 eb713
