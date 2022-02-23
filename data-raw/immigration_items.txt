@@ -303,14 +303,14 @@ View on Increasing Foreign Population
 
 
 number3
-usicr20040 
+usicr20040; pewrel2017_we
  Do you think there are too many immigrants in the U.S. today, too few, or about the right number of immigrants?
 1 Too many
 2 Too few
 3 About the right number
 
 number3a
-pewrel2017_we; cbsnyt199306
+cbsnyt199306
 Do you think the number of immigrants to [COUNTRY] nowadays should be increased, remain the same as it is or be reduced? 
 1	Be increased
 2	Remain the same as it is
@@ -353,7 +353,7 @@ Do you think the government should increase or decrease the inflow of foreign im
 4 The government should not allow any more immigrants
 
 *number4a
-eb592; ptvs2012
+eb592; ptvs2012; fnes1995
 There are too many immigrants in our country
 
 *number5

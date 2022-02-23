@@ -244,6 +244,7 @@ evs_greece2017,crime10,v186,c(1:10)
 evs_greece2017,impact5,v184,c(1:5)
 evs_greece2017,jobs10,v185,c(1:10)
 evs_greece2017,welfare10,v187,c(1:10)
+fnes1995,number4a,q7a1,c(4:1)
 gallup_canada198211,number3aa,q15,"c(2,3,1)"
 gallup_canada198703,number3aa,q2,"c(2,3,1)"
 gallup_canada198803,number3aa,q11,"c(2,3,1)"
